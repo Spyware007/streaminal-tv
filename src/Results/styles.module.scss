@@ -1,0 +1,10 @@
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 50px;
+    row-gap: 50px;
+
+    padding: 0 60px 0;
+    background-color: var(--darkBlack);
+}
