@@ -3,9 +3,14 @@ import Homepage from './Homepage';
 import MovieDetails from './MovieDetails';
 
 import { Routes, Route } from "react-router-dom";
+import { useEffect } from 'react';
 
 
 function App() {
+  useEffect(() => {
+    document.title = "Streaminal-TV";
+  }, []);
+  
   return (
     <div className="App">
       <Routes>

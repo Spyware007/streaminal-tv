@@ -8,3 +8,9 @@
     padding: 0 60px 0;
     background-color: var(--darkBlack);
 }
+
+@media only screen and (max-width: 768px) {
+    .results{
+        padding: 20px;
+    }
+}

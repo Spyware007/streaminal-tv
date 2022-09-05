@@ -31,11 +31,11 @@ a {
     flex: 1;
     padding: 0 12px;
 
-    display: -webkit-box;
-    max-width: 250px;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
 
     color: var(--white);
 }
@@ -52,4 +52,29 @@ a {
     border-radius: 20px;
     padding: 6px 8px;
     font-size: 18px;
+}
+
+@media only screen and (max-width: 768px) {
+    .movieImage {
+        height: 200px;
+    }
+
+    .movieCard {
+        max-width: 140px;
+        row-gap: 8px;
+        height: 300px;
+    }
+
+    .movieTitle {
+        font-size: 16px;
+    }
+
+    .movieReleaseDate {
+        font-size: 14px;
+    }
+
+    .tag {
+        padding: 3px 4px;
+        font-size: 14px;
+    }
 }
