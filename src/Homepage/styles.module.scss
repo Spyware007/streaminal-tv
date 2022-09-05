@@ -48,5 +48,11 @@
 @media only screen and (max-width: 768px) {
     #searchbarInput {
         width: 60vw;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    #searchbarInput::placeholder{
+        font-size: 18px;
     }
 }

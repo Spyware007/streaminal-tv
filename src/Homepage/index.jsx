@@ -55,7 +55,7 @@ export default function Homepage() {
                     <input
                         type="search"
                         name="searchbar"
-                        placeholder="Search for a movie"
+                        placeholder="Movies, TV shows, anime..."
                         id={styles.searchbarInput}
                         value={searchQuery}
                         onChange={(e) => {
