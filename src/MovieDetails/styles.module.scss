@@ -20,6 +20,7 @@
   display: flex;
   column-gap: 40px;
 
+  width: 100%;
   padding: 40px;
 
   border-radius: 10px;
@@ -30,8 +31,9 @@
 
 .movieImage {
   border-radius: 12px;
-  width: 250px;
+  width: 200px;
   height: 400px;
+  object-fit: cover;
 }
 
 .otherDetails {
@@ -138,18 +140,45 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .videoDiv {
+    height: 34vh;
+  }
+
   .detailsCard {
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 16px;
+    padding: 30px;
   }
+
   .movieImage {
     border-radius: 12px;
     width: 200px;
     height: 200px;
   }
+
+  .movieTitle {
+    font-size: 30px;
+  }
+
+  .production,
+  .releaseDate {
+    font-size: 20px;
+  }
+
+  .ratingAndDuration,
+  .cast,
+  .tag {
+    font-size: 18px;
+  }
+
+  .otherDetails {
+    row-gap: 14px;
+  }
+
   .rightDiv {
     width: 80vw;
   }
+
   .infoAndSeasons {
     display: flex;
     justify-content: center;
