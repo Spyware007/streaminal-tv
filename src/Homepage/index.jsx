@@ -72,9 +72,9 @@ export default function Homepage() {
                     </div>
                 </div>
             </div>
-            <div ref={resultsParent}>
+            {searchResults.length > 0 && <div ref={resultsParent}>
                 <Results results={searchResults} isLoading={isLoading} />
-            </div>
+            </div>}
         </div>
     )
 }

@@ -6,6 +6,7 @@ a {
 .movieCard {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     row-gap: 12px;
     align-items: center;
 
@@ -60,7 +61,7 @@ a {
     }
 
     .movieCard {
-        max-width: 140px;
+        width: 140px;
         row-gap: 8px;
         height: 300px;
     }
