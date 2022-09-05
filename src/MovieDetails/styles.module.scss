@@ -30,6 +30,8 @@
 
 .movieImage {
   border-radius: 12px;
+  width: 250px;
+  height: 400px;
 }
 
 .otherDetails {
@@ -140,8 +142,13 @@
     flex-direction: column;
     row-gap: 20px;
   }
+  .movieImage {
+    border-radius: 12px;
+    width: 200px;
+    height: 200px;
+  }
   .rightDiv {
-    width: 60vw;
+    width: 80vw;
   }
   .infoAndSeasons {
     display: flex;
