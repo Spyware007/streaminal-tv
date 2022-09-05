@@ -73,6 +73,12 @@ export default function MovieDetails() {
     const [seasonData, setSeasonData] = useState({});
     const query = useQuery();
 
+    useEffect(() => {
+        window.scroll({
+            top: 0,
+            left: 0
+        });
+    }, [])
 
     useEffect(() => {
         async function fetchData() {
