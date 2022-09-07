@@ -115,7 +115,7 @@ export default function Homepage() {
             <input
               type="search"
               name="searchbar"
-              placeholder="Search for a movie"
+              placeholder="Movies, TV shows, anime..."
               id={styles.searchbarInput}
               value={searchQuery}
               onChange={(e) => {
@@ -132,17 +132,18 @@ export default function Homepage() {
             </div>
           </div>
         </div>
-        {searchResults.length > 0 && (
-          <div ref={resultsParent}>
-            <Results results={searchResults} isLoading={isLoading} />
-          </div>
-        )}
-
-        <Slider title="Trending Movies" data={trendingMoviesData} />
-        <Slider title="Trending Tv Shows" data={trendingTvShows} />
-        <Slider title="Latest Movies" data={latestMovies} />
-        <Slider title="Latest Tv Shows" data={latestTvShows} />
       </div>
+      {searchResults.length > 0 && (
+        <div ref={resultsParent}>
+          <Results results={searchResults} isLoading={isLoading} />
+        </div>
+      )}
+      {/* <div> */}
+      <Slider title="Trending Movies" data={trendingMoviesData} />
+      <Slider title="Trending Tv Shows" data={trendingTvShows} />
+      <Slider title="Latest Movies" data={latestMovies} />
+      <Slider title="Latest Tv Shows" data={latestTvShows} />
+      {/* </div> */}
     </>
   );
 }
