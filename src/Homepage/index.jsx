@@ -27,7 +27,7 @@ export default function Homepage() {
     async function getSearchResults(query) {
         try {
             let res = await fetch(
-                `https://consumet-api.herokuapp.com/movies/flixhq/${query}`
+                `https://api.consumet.org/movies/flixhq/${query}`
             )
             res = await res.json();
             return res.results;
