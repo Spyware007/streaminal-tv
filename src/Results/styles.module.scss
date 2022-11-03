@@ -1,16 +1,15 @@
 .results {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    column-gap: 50px;
-    row-gap: 50px;
-
-    padding: 0 60px 0;
-    background-color: var(--darkBlack);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 50px;
+  padding: 0 60px 0;
+  background-color: var(--darkBlack);
 }
 
 @media only screen and (max-width: 768px) {
-    .results{
-        padding: 20px;
-    }
+  .results {
+    padding: 20px;
+  }
 }
