@@ -80,6 +80,18 @@ export default function Homepage() {
       return res.latestMovies;
     } catch (e) {
       console.log(e);
+
+    async function getSearchResults(query) {
+        try {
+            let res = await fetch(
+                `https://api.consumet.org/movies/flixhq/${query}`
+            )
+            res = await res.json();
+            return res.results;
+        }
+        catch (e) {
+            console.log(e);
+        }
     }
   }
   async function getLatestTvShows() {

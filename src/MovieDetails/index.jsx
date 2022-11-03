@@ -28,7 +28,7 @@ function renameKey(object, oldKey, newKey) {
 async function getMovieDetails(id) {
     console.log("GETTING MEDIA DETAILS");
     try {
-        let res = await fetch(`https://consumet-api.herokuapp.com/movies/flixhq/info?id=${id}`);
+        let res = await fetch(`https://api.consumet.org/movies/flixhq/info?id=${id}`);
         res = await res.json()
         return res;
     } catch (e) {
@@ -39,7 +39,7 @@ async function getMovieDetails(id) {
 async function getStreamURLS(episodeId, mediaId, server) {
     console.log("GETTING STREAM URLS");
     try {
-        let res = await fetch(`https://consumet-api.herokuapp.com/movies/flixhq/watch?episodeId=${episodeId}&mediaId=${mediaId}&server=upcloud`);
+        let res = await fetch(`https://api.consumet.org/movies/flixhq/watch?episodeId=${episodeId}&mediaId=${mediaId}&server=upcloud`);
         res = await res.json()
         return res;
     } catch (e) {
