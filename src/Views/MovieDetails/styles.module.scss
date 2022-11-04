@@ -1,3 +1,10 @@
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  margin: 50px 0;
+}
+
 .movieDetails {
   display: flex;
   flex-direction: column;
@@ -140,6 +147,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .mainDiv {
+    margin: 20px 0;
+  }
+
   .videoDiv {
     height: 34vh;
   }

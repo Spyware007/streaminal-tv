@@ -1,0 +1,17 @@
+.homepage {
+    width: 100vw;
+    height: auto;
+    background-color: var(--darkBlack);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loader {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}

@@ -20,6 +20,10 @@ body {
   background-color: var(--darkBlack);
 }
 
+.mainContainer {
+  padding: 50px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -77,5 +81,11 @@ code {
     width: 72px;
     height: 72px;
     opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mainContainer {
+    padding: 20px;
   }
 }

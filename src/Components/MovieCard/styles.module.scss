@@ -11,8 +11,8 @@ a {
     align-items: center;
 
     padding-bottom: 12px;
-    max-width: 250px;
-    height: 480px;
+    width: 200px;
+    height: 390px;
 
     border-radius: 10px;
     box-shadow: rgb(0 0 0 / 16%) 0px 1px 8px;
@@ -23,12 +23,12 @@ a {
     flex: 1;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
-    height: 350px;
+    height: 260px;
     width: 100%;
 }
 
 .movieTitle {
-    font-size: 22px;
+    font-size: 18px;
     flex: 1;
     padding: 0 12px;
 

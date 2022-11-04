@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import Results from "../Results/index";
+import Results from "../Results";
 
 const Slider = ({ title = "Title is empty", data = [] }) => {
   return (
