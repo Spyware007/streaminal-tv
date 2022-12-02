@@ -24,6 +24,14 @@ export default function SearchResults() {
     }
 
     useEffect(() => {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }, [])
+
+    useEffect(() => {
         getSearchResults(query);
     }, [query])
 

@@ -73,6 +73,14 @@ export default function MovieDetails() {
     const query = useQuery();
 
     useEffect(() => {
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }, [])
+
+    useEffect(() => {
         async function fetchData() {
             let movieDetails = await getMovieDetails(query.get("id"));
             setMovieDetails(movieDetails, setEpisode(movieDetails.episodes[0]));
@@ -109,7 +117,7 @@ export default function MovieDetails() {
 
     return (
         <div className={styles.mainDiv}>
-            <Header />
+            <Header style={{ padding: "0 20px" }} />
             <div className={styles.movieDetails}>
                 {isLoading
                     ?

@@ -25,8 +25,8 @@ export default function SearchBar({ onSearch }) {
                     }}
                 />
             </div>
-            <div className={styles.searchButton} onClick={() => { onSearch(searchQuery) }}>
-                <FiSearch size={40} color={COLORS.darkBlack} />
+            <div className={styles.searchButton} onClick={() => { searchQuery.trim() !== "" && onSearch(searchQuery) }}>
+                <FiSearch color={COLORS.darkBlack} className={styles.searchIcon} />
             </div>
         </div>
     )

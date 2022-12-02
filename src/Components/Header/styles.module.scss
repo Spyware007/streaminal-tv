@@ -1,0 +1,22 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 240px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 200px;
+        margin-bottom: 24px;
+    }
+}

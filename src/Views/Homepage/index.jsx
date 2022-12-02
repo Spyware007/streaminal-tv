@@ -12,6 +12,7 @@ export default function Homepage() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        setIsLoading(true);
         getTrendingMoviesData();
         getTrendingTvShows();
         getLatestMovies();
@@ -20,7 +21,6 @@ export default function Homepage() {
 
 
     async function getTrendingMoviesData() {
-        setIsLoading(true);
         try {
             let res = await fetch(
                 `https://streaminal-api.onrender.com/get-trending-movies`
