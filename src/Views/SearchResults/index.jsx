@@ -46,7 +46,14 @@ export default function SearchResults() {
                     </div>
                     :
                     <div className={styles.results}>
-                        <Results results={results} />
+                        {
+                            results.length === 0 ?
+                                <div className={styles.noResults}>
+                                    {`No results found for '${query}'`}
+                                </div>
+                                :
+                                <Results results={results} />
+                        }
                     </div>
             }
         </div>
