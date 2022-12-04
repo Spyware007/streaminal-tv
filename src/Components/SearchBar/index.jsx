@@ -21,6 +21,7 @@ export default function SearchBar({ onSearch }) {
                     }}
                     onKeyDown={(e) => {
                         if (e.key === "Enter") {
+                            searchQuery.trim() !== "" && onSearch(searchQuery);
                         }
                     }}
                 />
