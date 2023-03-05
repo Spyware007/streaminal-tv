@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
+import { useCookies } from "react-cookie";
 import { useLocation } from "react-router-dom";
 import { AiOutlineStar } from "react-icons/ai";
 import NetPlayer from "netplayer";
@@ -10,9 +11,12 @@ import {
     AccordionItemPanel,
 } from 'react-accessible-accordion';
 
+import Utilities from "../../Utilities";
+
 import styles from "./styles.module.scss";
 import accordionStyles from "./accordionStyles.module.scss";
 import Header from "../../Components/Header";
+import { API_ENDPOINTS } from "../../API/endpoints";
 
 function useQuery() {
     const { search } = useLocation();
@@ -26,19 +30,9 @@ function renameKey(object, oldKey, newKey) {
     }
 }
 
-async function getMovieDetails(id) {
-    try {
-        let res = await fetch(`https://api.consumet.org/movies/flixhq/info?id=${id}`);
-        res = await res.json()
-        return res;
-    } catch (e) {
-        console.log(e);
-    }
-}
-
 async function getStreamURLS(episodeId, mediaId, server) {
     try {
-        let res = await fetch(`https://api.consumet.org/movies/flixhq/watch?episodeId=${episodeId}&mediaId=${mediaId}&server=upcloud`);
+        let res = await fetch(`${API_ENDPOINTS.CONSUMET_URL}movies/flixhq/watch?episodeId=${episodeId}&mediaId=${mediaId}&server=upcloud`);
         res = await res.json()
         return res;
     } catch (e) {
@@ -65,6 +59,7 @@ function cleanStreamData(streamData) {
 }
 
 export default function MovieDetails() {
+    const [cookies, setCookie] = useCookies("recently_watched_id", { path: "/" });
     const [movieDetails, setMovieDetails] = useState({});
     const [streamData, setStreamData] = useState({});
     const [isLoading, setIsLoading] = useState(true);
@@ -78,11 +73,13 @@ export default function MovieDetails() {
             left: 0,
             behavior: 'smooth'
         });
+
+        window.localStorage.setItem("id", query.get("id"));
     }, [])
 
     useEffect(() => {
         async function fetchData() {
-            let movieDetails = await getMovieDetails(query.get("id"));
+            let movieDetails = await Utilities.getMovieDetails(query.get("id"));
             setMovieDetails(movieDetails, setEpisode(movieDetails.episodes[0]));
 
 
@@ -114,6 +111,8 @@ export default function MovieDetails() {
         }
         changeEpisode();
     }, [episode, query])
+
+    useEffect(() => { }, [])
 
     return (
         <div className={styles.mainDiv}>
