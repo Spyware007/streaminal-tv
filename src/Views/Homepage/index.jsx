@@ -86,7 +86,7 @@ export default function Homepage() {
                             <div className="lds-ripple"><div></div><div></div></div>
                         </div> :
                         <>
-                            <Slider title="Recently Watched" data={recentlyWatched} />
+                            {/* <Slider title="Recently Watched" data={recentlyWatched} /> */}
                             <Slider title="Trending Movies" data={trendingMoviesData} />
                             <Slider title="Trending TV Shows" data={trendingTvShows} />
                             <Slider title="Latest Movies" data={latestMovies} />
