@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
+import { API_ENDPOINTS } from "../../API/endpoints";
 import Header from "../../Components/Header"
 import Slider from "../../Components/Slider";
 import Utilities from "../../Utilities";
@@ -23,15 +24,13 @@ export default function Homepage() {
         getLatestTvShows();
     }, []);
 
-    useEffect(() => {
-        console.log(window.localStorage.getItem("id"));
-    }, [])
+    // useEffect(() => {
+    //     console.log(window.localStorage.getItem("id"));
+    // }, [])
 
     async function getTrendingMoviesData() {
         try {
-            let res = await fetch(
-                `https://streaminal-api.onrender.com/get-trending-movies`
-            );
+            let res = await fetch(API_ENDPOINTS.STREAMINAL_API_URL + API_ENDPOINTS.GET_TRENDING_MOVIES);
             res = await res.json();
             setTrendingMoviesData(res.trendingMovies);
         } catch (e) {
@@ -41,9 +40,7 @@ export default function Homepage() {
 
     async function getTrendingTvShows() {
         try {
-            let res = await fetch(
-                `https://streaminal-api.onrender.com/get-trending-tv-shows`
-            );
+            let res = await fetch(API_ENDPOINTS.STREAMINAL_API_URL + API_ENDPOINTS.GET_TRENDING_SHOWS);
             res = await res.json();
             setTrendingTvShows(res.trendingTvShows);
         } catch (e) {
@@ -53,9 +50,7 @@ export default function Homepage() {
 
     async function getLatestMovies() {
         try {
-            let res = await fetch(
-                `https://streaminal-api.onrender.com/get-latest-movies`
-            );
+            let res = await fetch(API_ENDPOINTS.STREAMINAL_API_URL + API_ENDPOINTS.GET_LATEST_MOVIES);
             res = await res.json();
             setLatestMovies(res.latestMovies);
         } catch (e) {
@@ -65,9 +60,7 @@ export default function Homepage() {
 
     async function getLatestTvShows() {
         try {
-            let res = await fetch(
-                `https://streaminal-api.onrender.com/get-latest-tv-shows`
-            );
+            let res = await fetch(API_ENDPOINTS.STREAMINAL_API_URL + API_ENDPOINTS.GET_LATEST_SHOWS);
             res = await res.json();
             setLatestTvShows(res.latestTvShows);
             setIsLoading(false);
