@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 import Homepage from './Views/Homepage';
 import MovieDetails from "./Views/MovieDetails";
 import SearchResults from './Views/SearchResults';
+import Header from './Components/Header';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <Routes>
         <Route exact path="/" element={<Homepage />} />
         <Route exact path="/watch" element={<MovieDetails />} />

@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useCookies } from "react-cookie";
 import { API_ENDPOINTS } from "../../API/endpoints";
-import Header from "../../Components/Header"
 import Slider from "../../Components/Slider";
-import Utilities from "../../Utilities";
 
 import styles from "./styles.module.scss";
 
@@ -72,7 +70,6 @@ export default function Homepage() {
     return (
         <div className="mainContainer">
             <div className={styles.homepage}>
-                <Header />
                 {
                     isLoading ?
                         <div className={styles.loader}>

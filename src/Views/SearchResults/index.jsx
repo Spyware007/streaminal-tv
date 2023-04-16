@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { API_ENDPOINTS } from "../../API/endpoints";
-import Header from "../../Components/Header";
 import Results from "../../Components/Results";
 import styles from "./styles.module.scss";
 
@@ -38,7 +37,6 @@ export default function SearchResults() {
 
     return (
         <div className="mainContainer">
-            <Header />
             {
                 isLoading
                     ?

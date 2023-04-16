@@ -15,7 +15,6 @@ import Utilities from "../../Utilities";
 
 import styles from "./styles.module.scss";
 import accordionStyles from "./accordionStyles.module.scss";
-import Header from "../../Components/Header";
 import { API_ENDPOINTS } from "../../API/endpoints";
 
 function useQuery() {
@@ -116,7 +115,6 @@ export default function MovieDetails() {
 
     return (
         <div className={styles.mainDiv}>
-            <Header style={{ padding: "0 20px" }} />
             <div className={styles.movieDetails}>
                 {isLoading
                     ?
