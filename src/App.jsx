@@ -3,11 +3,11 @@ import { useEffect } from 'react';
 import { useCookies } from "react-cookie";
 import { Routes, Route } from "react-router-dom";
 
-
 import Homepage from './Views/Homepage';
 import MovieDetails from "./Views/MovieDetails";
 import SearchResults from './Views/SearchResults';
 import Header from './Components/Header';
+import Footer from "./Components/Footer/index";
 
 
 function App() {
@@ -25,6 +25,7 @@ function App() {
         <Route exact path="/watch" element={<MovieDetails />} />
         <Route exact path="/search/:query" element={<SearchResults />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
