@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Header from "../../Components/Header";
+import { API_ENDPOINTS } from "../../API/endpoints";
 import Results from "../../Components/Results";
 import styles from "./styles.module.scss";
 
@@ -13,7 +13,7 @@ export default function SearchResults() {
     async function getSearchResults(query) {
         try {
             let res = await fetch(
-                `https://api.consumet.org/movies/flixhq/${query}`
+                `${API_ENDPOINTS.CONSUMET_URL}movies/flixhq/${query}`
             );
             res = await res.json();
             setResults(res.results);
@@ -37,7 +37,6 @@ export default function SearchResults() {
 
     return (
         <div className="mainContainer">
-            <Header />
             {
                 isLoading
                     ?
