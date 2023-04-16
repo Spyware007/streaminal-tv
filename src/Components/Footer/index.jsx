@@ -29,7 +29,7 @@ export default function Footer({ style }) {
           <img src="/github.png" alt="github" className={styles.github} />
         </a>
       </div>
-      <div className={styles.footerCopyrights}>© Streminal Tv</div>
+      <div className={styles.footerCopyrights}>© Streaminal TV</div>
     </>
   );
 }
